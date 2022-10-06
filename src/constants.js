@@ -1,0 +1,1 @@
+export const API_URL = 'https://my.api.mockaroo.com/shipments.json?key=5e0b62d0'

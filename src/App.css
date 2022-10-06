@@ -1,39 +1,56 @@
 .App {
+  background-color: white;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 50;
+  font-size: 0.80rem;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.shipment-table{
+  margin: 12px;
+  border-collapse: collapse;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.shipment-table thead{
+  text-align: left;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
 }
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.shipment-table td{
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 50;
+  font-size: 0.80rem;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+  color: gray;
+  
 }
-
-.App-link {
-  color: rgb(112, 76, 182);
+.shipment-table td, th{
+  padding: 10px;
 }
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.shipment-table tr{
+  border-top: 1px solid rgba(88, 88, 88, 0.326);
+}
+/*No border on headers row*/
+.shipment-table thead tr{ 
+  border: none;
+}
+.shipment-table th{
+  background: rgba(183, 183, 183, 0.966);
+  
+}
+.shipment-table tr button{
+  width: 50px;
+  height:50px;
+  text-align: center;
+  border-radius: 10px;
+}
+.shipment-table tr .details-button{
+  background-color: rgba(0, 255, 255, 0.468);
+}
+.shipment-table tr .delete-button{
+  background-color: red;
 }

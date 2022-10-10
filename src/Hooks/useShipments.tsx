@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { API_URL } from '../../../constants'
+import { API_URL } from '../constants'
 import axios from "axios";
-import Shipment from "../../../Models/IShipment";
-import { useAppDispatch } from "../../../app/hooks";
-import { initShipments } from "./shipmentSlice";
+import Shipment from "../Models/IShipment";
+import { useAppDispatch } from "../app/hooks";
+import { initShipments } from "../app/shipmentSlice";
 export default function useShipments(): [Shipment[], boolean, boolean] {
     const [shipments, setShipments] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -15,6 +15,7 @@ export default function useShipments(): [Shipment[], boolean, boolean] {
             .get(API_URL)
             .then((res) => {
                 setShipments(res.data);
+                dispatch(initShipments(res.data));
                 setLoading(false);
             })
             .catch((err) => {
@@ -22,7 +23,6 @@ export default function useShipments(): [Shipment[], boolean, boolean] {
                 setShipments([]);
                 setError(true);
             });
-    }, []);
-    dispatch(initShipments(shipments));
+    }, [dispatch]);
     return [shipments, loading, error];
 }

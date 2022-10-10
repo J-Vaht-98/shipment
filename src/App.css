@@ -6,6 +6,8 @@
   line-height: 1.66;
   letter-spacing: 0.03333em;
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 .shipment-table{
   margin: 12px;
@@ -18,8 +20,10 @@
   font-size: 0.75rem;
   line-height: 2.66;
   letter-spacing: 0.08333em;
+  white-space: nowrap;
 }
 .shipment-table td{
+  text-align: left;
   font-family: Roboto, Helvetica, Arial, sans-serif;
   font-weight: 50;
   font-size: 0.80rem;
@@ -49,8 +53,17 @@
   border-radius: 10px;
 }
 .shipment-table tr .details-button{
-  background-color: rgba(0, 255, 255, 0.468);
+  background-color: rgb(35, 220, 237);
+}
+.shipment-table tr .details-button::after{
+  content: "📇";
 }
 .shipment-table tr .delete-button{
   background-color: red;
 }
+.shipment-table tr .delete-button::after{
+  content: "❌";
+}
+
+
+

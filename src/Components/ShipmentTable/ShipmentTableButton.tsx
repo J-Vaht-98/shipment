@@ -10,11 +10,11 @@ export default ShipmentTableButton;
 
 export function DeleteButton(props:any){
    return (
-      <ShipmentTableButton {...props} background="red" className={"delete-button"}>{`❌`}</ShipmentTableButton>
+      <ShipmentTableButton {...props} className={"delete-button"}></ShipmentTableButton>
    )
 }
 export function DetailsButton(props:any){
    return (
-      <ShipmentTableButton {...props} background="blue" className={"details-button"}>{`📇`}</ShipmentTableButton>
+      <ShipmentTableButton {...props}   className={"details-button"}></ShipmentTableButton>
    )
 }

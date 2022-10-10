@@ -1,5 +1,5 @@
 import { useAppSelector } from "../../app/hooks";
-import { selectShipments } from "./hooks/shipmentSlice";
+import { selectShipments } from "../../app/shipmentSlice";
 import ShipmentTableRow from "./ShipmentTableRow";
 import Shipment from  "../../Models/IShipment"
 function ShipmentTable() {
@@ -10,7 +10,7 @@ function ShipmentTable() {
         "CUSTOMER",
         "TRACKING NO.",
         "STATUS",
-        "COSIGNEE",
+        "CONSIGNEE",
     ];
     return (
         <table className="shipment-table">

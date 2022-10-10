@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import shipmentReducer from '../Components/ShipmentTable/hooks/shipmentSlice'
+import shipmentReducer from './shipmentSlice'
 export const store = configureStore({
   reducer: {
     shipments: shipmentReducer,
